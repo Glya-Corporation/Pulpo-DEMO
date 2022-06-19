@@ -1,0 +1,402 @@
+  * {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  overflow-X: hidden;
+}
+
+body {
+  background-color: #F4F4F4;
+}
+
+nav.abajo {
+  background-color: #3742BA;
+  border-bottom: 1px solid white;
+  box-shadow: 5px 0 10px rgb(0,0,0,.6);
+}
+
+.menu {
+  position: fixed;
+  height: 75px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 907;
+  transition: all 1s;
+}
+
+.logo {
+  width: 90px;
+  height: 65px;
+}
+
+.menu_item {
+  display: flex;
+  list-style: none;
+  margin-right: 30px;
+}
+
+.menu_item li {
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+.menu_item li a {
+  padding: 7px 13px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.menu_item li:hover, li:active {
+  background: #00000060;
+  transition: .4s;
+}
+
+.btn_menu {
+  z-index: 999;
+  margin-right: 30px;
+  font-style: 25px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  transition: all 1s;
+}
+
+.giro {
+  transform: rotate3d(0, 1, 0, 360deg);
+  transition: all 1s;
+}
+
+ul.show {
+  top: 1px;
+}
+
+@media screen and (max-width: 952px) {
+  
+  .menu_item li a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px)  {
+  .menu {
+    height: 65px;
+  }
+  .btn_menu {
+    display: inline-flex;
+  }
+  .menu_item  {
+    z-index: 998;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #414141;
+    top: -100vh;
+    text-align: center;
+    transition: all .4s;
+    flex-direction: column;
+  }
+  .menu_item li {
+    margin: 30px 0 0 0;
+    line-height: 30px;
+  }
+  .menu_item li:hover {
+    background: none;
+  }
+  .menu_item li a {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
+  .menu_item li a:hover {
+    color: #477EEB;
+  }
+  .logo {
+    font-size: 25px;
+    padding-left: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .menu_item li {
+    margin: 5px 0 0 0;
+  }
+  .menu_item {
+    overflow: scroll;
+    height: 100vh;
+  }
+}
+
+/* estilos del cuerpo */
+.cuerpo {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.zona1{
+	z-index: 900;
+	position: relative;
+	width: 100%;
+	height: 600px;
+	background-image: url("../imagenes/zona1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	text-align: center center;
+	border-radius: 0rem 0rem 20rem 20rem;
+	box-shadow: 5px 0px 30px #00000080;
+}
+
+.separador {
+  display: block;
+  background: none;
+  height: 65px;
+}
+
+#menu-cuerpo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  width: 99vw;
+}
+
+#enlace-menu {
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  border-bottom: 1.5px solid #DE8006;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.categorias {
+  width: 140px;
+  height: 190px;
+  display: inline-block;
+  margin: 10px;
+  margin-top: 30px;
+  border-radius: 10%;
+	
+  opacity: 0;
+  transform: scale(0.9);
+  transition: .5s ease-in-out all;
+}
+
+.categorias.visible:hover {
+  transform: scale(1.1);
+}
+
+.categorias.visible {
+	opacity: 1;
+	transform: scale(1) translateX(0);
+  position: relative;
+}
+
+.categorias a {
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5%;
+  color: black;
+  display: block;
+  margin-top: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid gray;
+  padding: 5px;
+  width: 120px;
+  text-decoration: none;
+  background: #FFFFFF90;
+  box-shadow: 3px 3px 20px black;
+}
+
+.local1 {
+  background: url(../imagenes/local1.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 400px;
+  transform: translateX(0%);
+  transition: all 1.5s;
+  border-radius: 25rem 0px 0px 25rem;
+  z-index: 701;
+}
+
+.local2 {
+  background: url(../imagenes/local2.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 400px;
+  margin-top: -400px;
+  transform: translateX(100%);
+  transition: all 1.5s;
+  border-radius: 0px 25rem 25rem 0px;
+  z-index: 700;
+}
+
+.text-locales {
+  background: #FFFFFF80;
+  width: 300px;
+  height: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+  border: 1px solid #DE8006;
+  border-radius: 30px;
+}
+
+.text-locales h2 {
+  margin-top: 5px;
+}
+
+.text-locales a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.logo-ub {
+  margin-top: 25px;
+}
+
+.cambio1 {
+  transform: translateX(-100%);
+}
+.cambio2 {
+  transform: translateX(0%);
+}
+
+.btn_locales {
+	margin-top: -100px;
+	width: 70px;
+	height: 70px;
+	z-index: 800;
+	position: absolute;
+	background-image: url(../imagenes/arrow-right-circle.svg);
+	transition: all 1.5s;
+	cursor: pointer;
+}
+
+.btn_locales1 {
+  transform: rotate(540deg);
+}
+#contactos-cuerpo {
+  padding: 10px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background: #477EEB;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+#contactos-cuerpo a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.section-left,
+.section-right{
+  margin: auto;
+	display: inline-block;
+	width: 45%;
+}
+.pagos-cuerpo img {
+	width: 70px;
+	height: 70px;
+	margin-bottom: 30px;
+}
+
+.footer {
+	font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif';
+	background: #D7D7D7;
+	vertical-align: baseline;
+	text-align: center;
+	padding: 25px;
+	max-height: 100px;
+	overflow: hidden;
+}
+
+@media (max-width: 767px){
+  .section-left,
+  .section-right{
+    width: 80%;
+  }
+  .pagos-cuerpo img {
+    width: 60px;
+    height: 60px;
+  }
+
+}
+
+@media (min-width: 768px){
+		
+  .zona1 {
+    height: 1000px;
+  }
+  
+  #menu-cuerpo {
+    width: 80vw;
+  }
+  
+  .categorias {
+    width: 200px;
+    height: 250px;
+    margin-left: 50px;
+  }
+  
+  .local1,
+  .local2 {
+    height: 600px;
+  }
+  
+  .local2 {
+    margin-top: -600px;
+  }
+  
+  .text-locales {
+    font-size: 20px;
+    width: 400px;
+    height: 200px;
+  }
+
+  #contactos-cuerpo h2 {
+		font-size: 35px;
+	}
+	
+	#contactos-cuerpo p,
+	#contactos-cuerpo a {
+		font-size: 25px;
+	}
+	
+	#contactos-cuerpo img {
+		width: 60px;
+	}
+	
+	
+	.pagos-cuerpo img {
+	width: 100px;
+	height: 100px;
+	margin-left: 35px;
+	}
+}
+
+@media (min-width: 938px){
+	#menu-cuerpo {
+		width: 90%;
+	}
+	
+	.categorias {
+	  margin-left: 70px;
+	}
+}
