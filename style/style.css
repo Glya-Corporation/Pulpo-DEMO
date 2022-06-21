@@ -11,7 +11,7 @@ body {
 }
 
 nav.abajo {
-  background-color: #3742BA;
+  background-color: #4740FF;
   border-bottom: 1px solid white;
   box-shadow: 5px 0 10px rgb(0,0,0,.6);
 }
@@ -174,11 +174,16 @@ ul.show {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
-  border-bottom: 1.5px solid #DE8006;
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
+  border: 1.5px solid #DE8006;
+  width: 180px;
+  margin: 0px auto 40px;
+  transition: all .5s;
+  border-radius: 30px;
+}
+
+#enlace-menu:hover {
+  background: #DE800680;
+  
 }
 
 .categorias {
@@ -293,24 +298,38 @@ ul.show {
   padding: 10px;
   margin-top: 80px;
   margin-bottom: 80px;
-  background: #477EEB;
+  background: #4740FF;
   border-radius: 10px;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.contactos img {
+  padding: 10px;
+  background: #FFFFFFFF;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #contactos-cuerpo a {
-  color: white;
+  color: #eeeeee;
   text-decoration: none;
   cursor: pointer;
 }
 
+#contactos-cuerpo a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
 .section-left,
 .section-right{
-  margin: auto;
+  margin: 30px auto 20px;
 	display: inline-block;
 	width: 45%;
 }
+
 .pagos-cuerpo img {
 	width: 70px;
 	height: 70px;
@@ -399,4 +418,12 @@ ul.show {
 	.categorias {
 	  margin-left: 70px;
 	}
+}
+
+.home {
+  position: fixed;
+  background-color: #000;
+  top: 5px;
+  right: 60px;
+  z-index: 9999;
 }
