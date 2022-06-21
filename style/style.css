@@ -426,4 +426,5 @@ ul.show {
   top: 5px;
   right: 60px;
   z-index: 9999;
+  border-radius: 50px;
 }
